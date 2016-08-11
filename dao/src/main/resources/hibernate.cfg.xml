@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/payment</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">HomeSweetHome</property>
+    <!--<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>-->
+    <property name="hibernate.connection.pool_size">10</property>
+    <!--<property name="hibernate.connection.isolation">2</property>-->
+    <!--<property name="show_sql">true</property>-->
+
+    <!--<property name="hibernate.format_sql">true</property>-->
+
+    <!--<property name="hibernate.hbm2ddl.auto">validate</property>-->
+
+    <!--&lt;!&ndash;Cache configuration&ndash;&gt;-->
+    <!--<property name="hibernate.cacache.provider_class">org.hibernate.cache.EnCacheProvider</property>-->
+    <!--<property name="cache.use_query_cache">true</property>-->
+    <!--<property name="cache.use_second_level_cache">true</property>-->
+
+    <!--<mapping class="by.pvt.shmouradko.entities.Account"/>-->
+    <!--<mapping class="by.pvt.shmouradko.entities.CreditCard"/>-->
+    <!--<mapping class="by.pvt.shmouradko.entities.Person"/>-->
+    <!--<mapping class="by.pvt.shmouradko.entities.Transaction"/>-->
+
+    <!--<mapping class="by.pvt.shmouradko.entities.AdminInfo"/>-->
+
+    <property name="hibernate.show_sql">true</property>
+    <property name="debug">true</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="connection.isolation">2</property>
+    <property name="hibernate.cglib.use_reflection_optimizer">true</property>
+    <property name="hibernate.hbm2ddl.auto">validate</property>
+    <!-- cache config-->
+    <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
+    <property name="net.sf.ehcache.configurationResourceName">/ehcache.xml</property>
+    <property name="cache.use_query_cache">true</property>
+    <property name="cache.use_second_level_cache">true</property>
+
+  </session-factory>
+</hibernate-configuration>
